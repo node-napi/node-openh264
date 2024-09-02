@@ -4,9 +4,10 @@
       'target_name': 'node-openh264',
       'sources': [ 'src/node-openh264.cc' ],
       'libraries': [
-        '-llxc'
+         "<(module_root_dir)/includes/libopenh264.a",
       ],
-      'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")"],
+      'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")",
+                       "<(module_root_dir)/includes"],
       'dependencies': [
           "<!(node -p \"require('node-addon-api').gyp\")",
           "<!(node -p \"require('node-addon-api').targets\"):node_addon_api_except"

@@ -1,7 +1,8 @@
 {
   "main": "lib/binding.js",
   "scripts": {
-    "test": "sudo node --napi-modules ./test/test_binding.js",
+    "preinstall": "make includes",
+    "test": "node --napi-modules ./test/test_binding.js",
     "generate-typings": "tsc --declaration --emitDeclarationOnly --allowJs lib/binding.js",
     "lint": "npx -y standard .",
     "lint:fix": "npx -y prettier --write . && npx -y standard --fix ."
