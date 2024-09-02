@@ -7,7 +7,7 @@
     "lint:fix": "npx -y prettier --write . && npx -y standard --fix ."
   },
   "gypfile": true,
-  "name": "node-openh264",
+  "name": "@node-napi/openh264",
   "version": "0.1.0",
   "description": "Node native bindings for OpenH264",
   "repository": {
